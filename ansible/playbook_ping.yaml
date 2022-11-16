@@ -1,0 +1,19 @@
+---
+
+- hosts: tag_shiva_RedHat
+  gather_facts: False
+
+  tasks:
+    - name: ping
+      shell: ping -c 1 -w 2 8.8.8.8 
+      ignore_errors: true
+    
+    
+- hosts : tag_shiva_Debian
+  gather_facts : False
+  
+  tasks:
+    - name : ping
+      shell : ping -c 1 -w 2 8.8.8.8 
+
+    

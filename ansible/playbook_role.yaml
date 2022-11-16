@@ -1,0 +1,7 @@
+---
+- hosts: tag_shiva_RedHat
+  gather_facts: True
+  become: yes
+  
+  roles:
+    - { role: deploy_apache_centos }
